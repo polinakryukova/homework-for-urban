@@ -1,0 +1,7 @@
+immutable_var = (1, 'sun', 'True', [1, 2, 3])
+print('Immutable tuple: ', immutable_var)
+# immutable_var[0] = '2'  # элементы кортежа неизменяемы..
+
+mutable_list = [1, 'sun', 'True', [1, 2, 3]]
+mutable_list[1] = 'moon'
+print('Mutable list: ', mutable_list)
