@@ -1,0 +1,13 @@
+my_list = ['apple', 'orange', 'peach', 'plum', 'another apple']
+print('My_list content: ', my_list)
+print('First element: ', my_list[0])
+print('Last element: ', my_list[-1])
+print('Sublist: ', my_list[2:6])
+my_list[2] = 'pineapple'
+print(my_list)
+
+my_dict = {'House': 'Дом', 'Green': 'Зеленый', 'Pineapple': 'Ананас'}
+print('My dictionary: ', my_dict)
+print('Translation for "House": ', my_dict['House'])
+my_dict.update({'Cloud': 'Облако'})
+print('Modified dictionary: ', my_dict)
