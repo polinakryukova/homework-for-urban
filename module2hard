@@ -1,0 +1,16 @@
+def result(n):
+    shifr = []
+    for i in range(1, 21):
+        for j in range(2, 21):
+            if n % (i + j) == 0 and i < j:
+                shifr.append(i)
+                shifr.append(j)
+    res = ''
+    for i in shifr:
+        new = str(i)
+        res = res + new
+    print(int(res))
+
+# проверка
+for i in range(3, 21):
+    result(i)
