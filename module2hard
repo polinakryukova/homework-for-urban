@@ -9,8 +9,8 @@ def result(n):
     for i in shifr:
         new = str(i)
         res = res + new
-    print(int(res))
+    return(int(res))
 
 # проверка
 for i in range(3, 21):
-    result(i)
+    print(i, ' - ', result(i))
