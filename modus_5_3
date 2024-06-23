@@ -1,0 +1,15 @@
+class Building:
+    def __init__(self, numberOfFloors, buildingType):
+        self.numberOfFloors = int(numberOfFloors)
+        self.buildingType = str(buildingType)
+
+    def __eq__(self, other):
+        return self.numberOfFloors == other.numberOfFloors and self.buildingType == other.buildingType
+
+
+H1 = Building(9, 'Дворец')
+H2 = Building(9, 'Дворец')
+H3 = Building(2, 'Вокзал')
+
+print(H1 == H2)
+print(H1 == H3)
