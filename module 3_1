@@ -14,15 +14,12 @@ def string_info(string):
 
 def is_contains(string = str, list_to_search = list):
     flag = False
-    a = string
-    a.lower()
+    a = string.lower()
     for i in range(len(list_to_search)):
-        b = str(list_to_search[i])
-        d = b.lower()
-        if d in list_to_search:
+        b = str(list_to_search[i]).lower()
+        if a == b:
             flag = True
-            count_calls()
-            break
+    count_calls()
     return flag
 
 print(string_info('Capybara'))
