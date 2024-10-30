@@ -1,0 +1,32 @@
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+
+# # Создание случайной схемы из 10 точек. Новые возможности: с помощью библиотеки random
+fig, ax = plt.subplots()
+ax.plot([random.randint(1,5) for x in range(10)],  [random.randint(1,5) for y in range(10)])
+plt.show()
+
+
+# Простой график с простыми данными
+x = np.linspace(0, 5, 50)
+
+fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
+ax.plot(x, x+15, label='First')
+ax.plot(x, x*8, label='Second')
+ax.plot(x, x**3, label='Third')
+ax.set_xlabel('x axis')
+ax.set_ylabel('y axis')
+ax.set_title("My Lovely First Plot")
+ax.legend()
+plt.show()
+
+#
+data = {'Weekends': 10, 'Salary': 15, 'I Drink Tea': 5, 'Personal development': 30}
+names = list(data.keys())
+values = list(data.values())
+
+fig, axs = plt.subplots()
+axs.bar(names, values)
+fig.suptitle('What I love my work for')
+plt.show()
