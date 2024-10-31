@@ -1,0 +1,25 @@
+import sys
+
+def introspection_info(obj):
+    info = {
+        'Тип': type(obj),
+        'Атрибуты': dir(obj),
+        'Методы': [method for method in dir(obj) if callable(getattr(obj, method))],
+        'Модуль': obj.__module__ if hasattr(obj, '__module__') else None,
+        'Размер': sys.getsizeof(obj)
+    }
+    return info
+
+class MyClass:
+  def __init__(self, name, age):
+    self.name = name
+
+  def say_hello(self):
+    return f"Привет, {self.name}!"
+
+my_object = MyClass("Полина", 10)
+
+
+
+number_info = introspection_info(my_object)
+print(number_info)
