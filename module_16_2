@@ -1,0 +1,23 @@
+from fastapi import FastAPI, Path
+# from
+
+app = FastAPI()         # инициализируем приложение
+
+
+@app.get('/')
+async def welcome() -> dict:
+    return {'message': 'Main page'}
+
+@app.get('/user/admin')
+async def welcome() -> dict:
+    return {'message': 'You entered as an admin'}
+
+@app.get('/user/{user_id}')
+async def user(
+        user_id: int = Path(ge=1, le= 100, description="Enter User ID", example="1")) -> dict:
+    return {'message': f'You entered as user {user_id}'}
+
+@app.get('/user/{username}/{age}')
+async def id(username: str = Path(min_length=5, max_length=20, description='Enter username', example='UrbanUser'), age: int = Path(ge = 18, description='Enter age', example='24')) -> dict:
+    return {'message': f'Information about user. Name: {username}, Age: {age}'}
+
