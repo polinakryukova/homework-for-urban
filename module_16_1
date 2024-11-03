@@ -7,7 +7,7 @@ async def welcome() -> dict:
     return {'message': 'Main page'}
 
 @app.get('/user/admin')
-async def welcome() -> dict:
+async def adm() -> dict:
     return {'message': 'You entered as an admin'}
 
 @app.get('/user/{user_id}')
