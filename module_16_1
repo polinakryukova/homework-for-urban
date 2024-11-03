@@ -1,0 +1,20 @@
+from fastapi import FastAPI
+
+app = FastAPI()         
+
+@app.get('/')
+async def welcome() -> dict:
+    return {'message': 'Main page'}
+
+@app.get('/user/admin')
+async def welcome() -> dict:
+    return {'message': 'You entered as an admin'}
+
+@app.get('/user/{user_id}')
+async def user(user_id: str) -> dict:
+    return {'message': f'You entered as user №{user_id}'}
+
+@app.get('/user/')
+async def id(username: str, age: int) -> dict:
+    return {'message': f'Information about user. Name: {username}, Age: {age}'}
+
